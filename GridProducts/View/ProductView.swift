@@ -58,7 +58,3 @@ struct ProductView: View {
 #Preview {
     ProductView()
 }
-
-
-
-

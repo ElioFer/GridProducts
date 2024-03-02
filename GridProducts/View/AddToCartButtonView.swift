@@ -18,13 +18,13 @@ struct AddToCartButtonView: View {
             action()
         } label: {
             HStack {
-                Image(systemName: "cart.badge.plus")
+                Image(systemName: product.stock == 0 ? "cart.badge.minus" : "cart.badge.plus")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 40.0, height: 40.0)
                     .padding(.leading)
                 
-                Text("Add to cart")
+                Text(product.stock == 0 ? "Out of stock" : "Add to cart")
                     .font(.headline)
                     .multilineTextAlignment(.center)
                     .padding(.trailing)
